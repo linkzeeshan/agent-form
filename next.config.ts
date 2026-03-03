@@ -1,12 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  output: "export",               // IMPORTANT
+  trailingSlash: true,            // Important for Azure routing
   reactStrictMode: true,
   compiler: {
-    // Set removeConsole to true for the production environment
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === "production",
   },
 };
 
